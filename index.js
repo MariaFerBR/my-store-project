@@ -29,6 +29,10 @@ app.use(cors(options));
 /* // Allow any origin
 app.use(cors()); */
 
+app.get('/', async (req, res) => {
+  res.send("My server in express");
+});
+
 routerApi(app);
 
 app.use(logErrors);
